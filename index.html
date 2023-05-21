@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Cajero Automático</h1>
+
+    <div id="seleccionCuenta">
+        <h2>Selecciona una cuenta:</h2>
+        <select id="seleccionCuentaSelect">
+            <option value="0">Persona 1</option>
+            <option value="1">Persona 2</option>
+            <option value="2">Persona 3</option>
+        </select>
+        <br>
+        <button onclick="ingresarCuenta()">Ingresar</button>
+    </div>
+
+    <div id="password" style="display: none;">
+        <h2>Ingresa el password:</h2>
+        <input type="password" id="passwordInput" placeholder="Password">
+        <br>
+        <button onclick="verificarPassword()">Confirmar</button>
+        <button onclick="cancelarPassword()">Cancelar</button>
+        <p id="error"></p>
+    </div>
+
+    <div id="opciones" style="display: none;">
+        <h2>Opciones:</h2>
+        <button onclick="consultarSaldo()">Consultar saldo</button><br>
+        <button onclick="ingresarMonto()">Ingresar monto</button><br>
+        <button onclick="retirarMonto()">Retirar monto</button><br>
+        <button onclick="cerrarSesion()">Salir</button>
+    </div>
+
+    <div id="saldo" style="display: none;">
+        <h2>Consulta de saldo</h2>
+        <p id="saldoMonto"></p>
+        <button onclick="volver()">Volver</button>
+        <button onclick="cerrarSesion()">Salir</button>
+    </div>
+
+    <div id="ingreso" style="display: none;">
+        <h2>Ingreso de monto</h2>
+        <input type="number" id="ingresoMonto" placeholder="Monto a ingresar">
+        <br>
+        <button onclick="confirmarIngreso()">Confirmar</button>
+        <button onclick="cancelarOperacion()">Cancelar</button>
+        <p id="errorIngreso"></p>
+    </div>
+
+    <div id="retiro" style="display: none;">
+        <h2>Retiro de monto</h2>
+        <input type="number" id="retiroMonto" placeholder="Monto a retirar">
+        <br>
+        <button onclick="confirmarRetiro()">Confirmar</button>
+        <button onclick="cancelarOperacion()">Cancelar</button>
+        <p id="errorRetiro"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
